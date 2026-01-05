@@ -1,0 +1,11 @@
+#heading {
+  color: blue;
+  font-size: 24px;
+  background-color: orange;
+}
+
+#heading.active {
+  color: red;
+  font-size: 40px;
+  background-color: yellow;
+}

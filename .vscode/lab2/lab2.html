@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore India | Tourism</title>
+    <link rel="stylesheet" href="lab2.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginSection" class="auth-box">
+    <h1>🌍 Explore India</h1>
+    <h2>Login</h2>
+
+    <input type="text" id="loginUser" placeholder="Username">
+    <input type="password" id="loginPass" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+    <p class="link" onclick="showSignup()">Don't have an account? Sign up</p>
+    <p id="loginMsg"></p>
+</div>
+
+<!-- SIGNUP -->
+<div id="signupSection" class="auth-box hidden">
+    <h2>Sign Up</h2>
+
+    <input type="text" id="signupUser" placeholder="Create Username">
+    <input type="password" id="signupPass" placeholder="Create Password">
+
+    <button onclick="signup()">Sign Up</button>
+    <p class="link" onclick="showLogin()">Already have an account? Login</p>
+    <p id="signupMsg"></p>
+</div>
+
+<!-- HOME -->
+<div id="homeSection" class="hidden">
+
+    <nav class="navbar">
+        <div class="logo">🌍 ExploreIndia</div>
+
+        <ul class="nav-links">
+            <li onclick="showAttractions()">Attractions</li>
+            <li onclick="showRestaurants()">Restaurants</li>
+            <li onclick="showHotels()">Hotels</li>
+            <li onclick="showContact()">Contact Us</li>
+        </ul>
+
+        <div class="profile" onclick="openProfile()">👤 Profile</div>
+    </nav>
+
+    <div class="content" id="contentArea"></div>
+</div>
+
+<!-- LOCATION MODAL -->
+<div id="locationModal" class="modal hidden">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeLocation()">✕</button>
+        <img id="modalImg">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <div id="modalRating"></div>
+    </div>
+</div>
+
+<!-- PROFILE MODAL -->
+<div id="profileModal" class="modal hidden">
+    <div class="modal-content small">
+        <button class="modal-close" onclick="closeProfile()">✕</button>
+
+        <h2>My Profile</h2>
+
+        <div id="profileView">
+            <p><b>Username:</b> <span id="pUser"></span></p>
+            <p><b>Name:</b> <span id="pName"></span></p>
+            <p><b>Email:</b> <span id="pEmail"></span></p>
+            <button onclick="editProfile()">Edit</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div id="profileEdit" class="hidden">
+            <input id="editName" placeholder="Full name">
+            <input id="editEmail" placeholder="Email">
+            <button onclick="saveProfile()">Save</button>
+            <button onclick="cancelEdit()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script src="lab2.js"></script>
+</body>
+</html>
