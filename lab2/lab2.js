@@ -1,6 +1,4 @@
-/* ===============================
-   INITIAL STATE
-================================ */
+
 window.onload = () => {
   loginSection.classList.remove("hidden");
   signupSection.classList.add("hidden");
@@ -9,9 +7,6 @@ window.onload = () => {
   locationModal.classList.add("hidden");
 };
 
-/* ===============================
-   AUTH DATA
-================================ */
 let username = "";
 let password = "";
 
@@ -20,9 +15,6 @@ let profile = {
   email: ""
 };
 
-/* ===============================
-   AUTH FUNCTIONS
-================================ */
 function showSignup() {
   loginSection.classList.add("hidden");
   signupSection.classList.remove("hidden");
@@ -71,9 +63,6 @@ function logout() {
   loginSection.classList.remove("hidden");
 }
 
-/* ===============================
-   ATTRACTIONS DATA
-================================ */
 const attractions = [
   {
     name: "Taj Mahal",
@@ -131,9 +120,6 @@ const attractions = [
   }
 ];
 
-/* ===============================
-   ATTRACTIONS PAGE
-================================ */
 function showAttractions() {
   contentArea.innerHTML = `
     <h1>🏰 Tourist Attractions</h1>
@@ -166,9 +152,6 @@ function filterAttractions(value) {
   renderCards(filtered);
 }
 
-/* ===============================
-   LOCATION MODAL
-================================ */
 function openLocation(index) {
   let a = attractions[index];
   modalImg.src = a.img;
@@ -182,9 +165,6 @@ function closeLocation() {
   locationModal.classList.add("hidden");
 }
 
-/* ===============================
-   OTHER NAV SECTIONS
-================================ */
 function showRestaurants() {
   contentArea.innerHTML = `
     <h1>🍽️ Restaurants</h1>
@@ -207,9 +187,6 @@ function showContact() {
   `;
 }
 
-/* ===============================
-   PROFILE MODAL
-================================ */
 function openProfile() {
   pUser.innerText = username;
   pName.innerText = profile.name || "-";
