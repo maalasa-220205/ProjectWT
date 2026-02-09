@@ -1,0 +1,5 @@
+
+File locked and written safely.name is unique
+this is sample text 
+New line added )
+Line added using file_put_contents()
